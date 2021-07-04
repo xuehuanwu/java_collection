@@ -20,14 +20,18 @@ public class ListMethod {
         list2.add("5555");
 
         //并集
-        //list1.addAll(list2);
+        list1.addAll(list2);
+        list1.stream().forEach(item -> System.out.println(item));
         //交集
-        //list1.retainAll(list2);
+        list1.retainAll(list2);
+        list1.stream().forEach(item -> System.out.println(item));
         //差集
-        //list1.removeAll(list2);
+        list1.removeAll(list2);
+        list1.stream().forEach(item -> System.out.println(item));
         //无重复并集
         list2.removeAll(list1);
         list1.addAll(list2);
+        list1.stream().forEach(item -> System.out.println(item));
 
         //iterator遍历集合
         Iterator<String> it=list1.iterator();
